@@ -11,11 +11,20 @@
 1. Скопируйте репозиторий:
 
 ```bash
-git clone <URL_репозитория>
-cd <имя_папки_репозитория>
+git clone https://github.com/Maruf995/Telegram_django.git
+cd bot_service/bot_panel
+```
+2. Сделать миграции:
+```
+docker-compose run web python manage.py makemigrations
+docker-compose run web python manage.py migrate
+
+3. Создать суперпользователя:
+```
+docker-compose run web python manage.py createsuperuser
 ```
 
-2. Создайте файл `.env` на основе файла `.env.example` и заполните его переменные:
+4. Создайте файл `.env` на основе файла `.env.example` и заполните его переменные:
 
 ```env
 BOT_TOKEN=
@@ -27,13 +36,7 @@ DB_PORT=
 SECRET_KEY=
 ```
 
-3. Перейдите в папку с ботом и админ-панелью:
-
-```bash
-cd bot_service/bot_panel
-```
-
-4. Запустите контейнер Docker:
+5. Запустите контейнер Docker:
 
 ```bash
 docker-compose up -d --build
