@@ -14,10 +14,12 @@
 git clone https://github.com/Maruf995/Telegram_django.git
 cd bot_service/bot_panel
 ```
+
 2. Сделать миграции:
 ```
 docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
+```
 
 3. Создать суперпользователя:
 ```
