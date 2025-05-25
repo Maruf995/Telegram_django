@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Virtual environments
+venv/
+env/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# PyCharm/VSCode
+.idea/
+.vscode/
+
+# Docker
+*.db
+*.pid
+*.sock
+*.tar
+*.img
+*.bak
+
+# Media/uploads
+/media
+/orders.xlsx
